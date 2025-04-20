@@ -4,11 +4,10 @@ body, html {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: auto auto 1fr;
 }
 
 .top-section {
-    grid-row: 1 / 2;
     background-color: lightblue;
     height: 12.5vh; 
     display: flex;
@@ -34,6 +33,14 @@ body, html {
     gap: 10px;
 }
 
+.horizontal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
 .button {
     padding: 10px;
     background-color: white;
@@ -43,22 +50,17 @@ body, html {
     text-align: center;
 }
 
-.main-container {
-    display: grid;
-    grid-template-columns: 0.375fr 3.625fr; 
-    height: 87.5vh; 
+/* Equal width for the category buttons */
+.category-button {
+    width: 100px;
 }
 
-.left-section {
-    background-color: lightgreen;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.main-container {
+    display: grid;
+    height: 100%;
 }
 
 .main-content {
     background-color: lightgray;
+    height: 100%;
 }
